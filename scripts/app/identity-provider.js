@@ -23,6 +23,7 @@ var IdentityProvider = function (config) {
         if (config.name == 'ADFS') {
             authorize_url = config.endpoint
                             + '?wa=' + config.wa
+                            + '&wreply=' + config.wtrealm + '/adfs/token'
                             + '&wtrealm=' + config.wtrealm;
         } else {
             authorize_url = config.endpoint

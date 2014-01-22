@@ -15,18 +15,18 @@ var appSettings = {
     },
 
     facebook: {
-        clientId: '$FACEBOOK_CLIENT_ID$', // Put your Facebook Client ID here
-        redirectUri: '$FACEBOOK_REDIRECT_URI$' // Put your Facebook Redirect URI here
+        appId: '1408629486049918', // Put your Facebook App ID here
+        redirectUri: 'https://www.facebook.com/connect/login_success.html' // Put your Facebook Redirect URI here
     },
 
     google: {
-        clientId: '$GOOGLE_CLIENT_ID$', // Put your Google Client ID here
-        redirectUri: '$GOOGLE_REDIRECT_URI$' // Put your Google Redirect URI here
+        clientId: '406987471724-q1sorfhhcbulk6r5r317l482u9f62ti8.apps.googleusercontent.com', // Put your Google Client ID here
+        redirectUri: 'http://localhost' // Put your Google Redirect URI here
     },
 
     liveId: {
-        clientId: '$LIVEID_CLIENT_ID$', // Put your LiveID Client ID here
-        redirectUri: '$LIVEID_REDIRECT_URI$' // Put your LiveID Redirect URI here
+        clientId: '000000004C10D1AF', // Put your LiveID Client ID here
+        redirectUri: 'https://login.live.com/oauth20_desktop.srf' // Put your LiveID Redirect URI here
     },
 
     adfs: {

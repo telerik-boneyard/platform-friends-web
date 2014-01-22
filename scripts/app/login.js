@@ -11,7 +11,8 @@ app.Login = (function () {
 
         var $loginUsername;
         var $loginPassword;
-        var isFacebookLogin = (appSettings.facebook.clientId !== '$FACEBOOK_CLIENT_ID$' && appSettings.facebook.redirectUri !== '$FACEBOOK_REDIRECT_URI$');
+        var isHttp = (appSettings.everlive.scheme === 'http');
+        var isFacebookLogin = (appSettings.facebook.appId !== '$FACEBOOK_APP_ID$' && appSettings.facebook.redirectUri !== '$FACEBOOK_REDIRECT_URI$');
         var isGoogleLogin = (appSettings.google.clientId !== '$GOOGLE_CLIENT_ID$' && appSettings.google.redirectUri !== '$GOOGLE_REDIRECT_URI$');
         var isLiveIdLogin = (appSettings.liveId.clientId !== '$LIVEID_CLIENT_ID$' && appSettings.liveId.redirectUri !== '$LIVEID_CLIENT_ID$');
         var isAdfsLogin = (appSettings.adfs.adfsRealm !== '$ADFS_REALM$' && appSettings.adfs.adfsEndpoint !== '$ADFS_ENDPOINT$');
@@ -87,23 +88,9 @@ app.Login = (function () {
                 return;
             }
 
-            var facebook = new FacebookIdentityProvider(appSettings.facebook.clientId);
+            var facebook = new FacebookIdentityProvider(appSettings.facebook.appId);
             facebook.init();
             app.mobileApp.showLoading();
-
-            /*var facebookConfig = {
-                name: 'Facebook',
-                loginMethodName: 'loginWithFacebook',
-                endpoint: 'https://www.facebook.com/dialog/oauth',
-                response_type: 'token',
-                client_id: appSettings.facebook.clientId,
-                redirect_uri: appSettings.facebook.redirectUri,
-                access_type: 'online',
-                scope: 'email',
-                display: 'touch'
-            };
-            var facebook = new IdentityProvider(facebookConfig);
-            app.mobileApp.showLoading();*/
 
             facebook.getAccessToken(function(token) {
                 if (token) {
@@ -225,6 +212,10 @@ app.Login = (function () {
         var loginWithADSF = function () {
 
             if (!isAdfsLogin) {
+                return;
+            }
+            if (isHttp) {
+                alert('ADFS authentication can be done via HTTPS only.');
                 return;
             }
             var adfsConfig = {

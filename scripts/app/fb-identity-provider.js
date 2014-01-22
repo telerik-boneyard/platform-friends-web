@@ -1,9 +1,9 @@
-var FacebookIdentityProvider = function (clientId) {
+var FacebookIdentityProvider = function (appId) {
     var that = this;
 
     this.init = function () {
       FB.init({
-          appId: clientId,
+          appId: appId,
           status: true,
           xfbml: true
       });
