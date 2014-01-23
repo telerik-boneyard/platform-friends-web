@@ -24,11 +24,11 @@ app.Activities = (function () {
                 },
                 Picture: {
                     fields: 'Picture',
-                    defaultValue: ''
+                    defaultValue: null
                 },
                 UserId: {
                     field: 'UserId',
-                    defaultValue: ''
+                    defaultValue: null
                 },
                 Likes: {
                     field: 'Likes',
