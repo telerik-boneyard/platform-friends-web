@@ -1,4 +1,6 @@
-**Friends sample app** for **Web**. 
+Friends Sample App for Web
+=============================
+This repository contains the [Friends sample app](http://docs.telerik.com/platform/backend-services/samples/friends/friends-sample) for Web/HTML. The Friends app is a sample app showcasing the integration of Telerik Platform services into a web page appllication. To download the source code, just click on the "Download ZIP" button.
 
 ## Showcased features and SDKs
 
