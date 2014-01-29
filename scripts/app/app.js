@@ -68,6 +68,13 @@ var app = (function (win) {
                 analytics.Stop();
             }
             return el.Users.logout();
+        },
+
+        reload: function () {
+            if (!window.location.origin) {
+              window.location.origin = window.location.protocol + '//' + window.location.hostname + (window.location.port ? ':' + window.location.port : '');
+            }
+            window.location.replace(window.location.origin);
         }
     };
 

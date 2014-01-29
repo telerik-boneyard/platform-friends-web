@@ -98,6 +98,13 @@ app.Activities = (function () {
     // Activities view model
     var activitiesViewModel = (function () {
 
+        var init = function () {
+            var users = app.Users.users();
+            if (!users) {
+                app.helper.reload();
+            }
+        };
+
         // Navigate to activityView When some activity is selected
         var activitySelected = function (e) {
 
@@ -120,6 +127,7 @@ app.Activities = (function () {
         };
 
         return {
+            init: init,
             activities: activitiesModel.activities,
             activitySelected: activitySelected,
             logout: logout
