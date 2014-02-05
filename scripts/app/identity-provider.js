@@ -40,7 +40,7 @@ var IdentityProvider = function (config) {
 
         var pollTimer = window.setInterval(function() {
             try {
-                if (ref.document.URL.indexOf(config.redirect_uri) != -1) {
+                if (ref.document.URL.indexOf(config.redirect_uri) != -1 || ref.document.URL.indexOf('access_token') != -1) {
                     that.locationChanged(ref.document.URL, callback);
                     window.clearInterval(pollTimer);
                 }
