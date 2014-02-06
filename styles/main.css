@@ -41,6 +41,10 @@
           box-shadow: 0 0 5px 0 rgba(0, 0, 0, .5);
 }
 
+.km-flat .km-loader:before {
+  background: transparent;
+}
+
 #friendsApp.km-flat,
 #friendsApp.km-flat .km-navbar,
 #friendsApp.km-flat .km-content {

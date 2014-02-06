@@ -9,13 +9,15 @@ app.Activity = (function () {
 
     var activityViewModel = (function () {
 
-        var activityUid;
+        var activityUid,
+            activityPicture;
 
         var init = function () {
              var users = app.Users.users();
              if (!users) {
                 app.helper.reload();
             }
+            activityPicture = $('#picture');
         };
 
         var show = function (e) {
@@ -23,6 +25,7 @@ app.Activity = (function () {
             activityUid = e.view.params.uid;
             // Get current activity (based on item uid) from Activities model
             var activity = app.Activities.activities.getByUid(activityUid);
+            activityPicture[0].style.display = (activity.Picture !== '') ? 'block' : 'none';
             kendo.bind(e.view.element, activity, kendo.mobile.ui);
         };
 
