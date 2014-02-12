@@ -7,25 +7,42 @@ var app = app || {};
 app.Activity = (function () {
     'use strict'
 
+    var $commentsContainer,
+        listScroller;
+
     var activityViewModel = (function () {
 
         var activityUid,
-            activityPicture;
+            activity,
+            $activityPicture;
 
         var init = function () {
              var users = app.Users.users();
              if (!users) {
                 app.helper.reload();
             }
-            activityPicture = $('#picture');
+            $commentsContainer = $('#comments-listview');
+            $activityPicture = $('#picture');
         };
 
         var show = function (e) {
 
+            $commentsContainer.empty();
+
+            listScroller = e.view.scroller;
+            listScroller.reset();
+
             activityUid = e.view.params.uid;
             // Get current activity (based on item uid) from Activities model
-            var activity = app.Activities.activities.getByUid(activityUid);
-            activityPicture[0].style.display = (activity.Picture !== '') ? 'block' : 'none';
+            activity = app.Activities.activities.getByUid(activityUid);
+            $activityPicture[0].style.display = activity.Picture ? 'block' : 'none';
+
+            app.Comments.comments.filter({
+                field: 'ActivityId',
+                operator: 'eq',
+                value: activity.Id
+            });
+
             kendo.bind(e.view.element, activity, kendo.mobile.ui);
         };
 
@@ -48,7 +65,10 @@ app.Activity = (function () {
         return {
             init: init,
             show: show,
-            remove: removeActivity
+            remove: removeActivity,
+            activity: function () {
+                return activity;
+            },
         };
 
     }());

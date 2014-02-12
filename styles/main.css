@@ -451,11 +451,13 @@
 #friendsApp .activities-view .km-content,
 #friendsApp .activity-view .km-content,
 #friendsApp .add-activity-view .km-content,
+#friendsApp .add-comment-view .km-content,
 #friendsApp .activities-view .km-listview {
   background-color: #fff;
 }
 
-#friendsApp .activities-view .km-list > li {
+#friendsApp .activities-view .km-list > li,
+#friendsApp .activity-view .km-list > li {
   overflow: visible;
   padding: .75em 0;
   border-width: 0 0 1px;
@@ -465,6 +467,11 @@
      -moz-box-shadow: none;
           box-shadow: none;
   color: #34495e;
+}
+
+#friendsApp .activity-view .comments-wrp {
+  margin-top: 1em;
+  border-top: 1px solid #eaeced;
 }
 
 #friendsApp .activities-view .km-list > li:first-child {
@@ -492,11 +499,13 @@
 
 #friendsApp .activity-content .person-name,
 #friendsApp .add-activity-view .person-name,
+#friendsApp .add-comment-view .person-name,
 #friendsApp .activity-content .time-span {
   font-weight: 600;
 }
 
 #friendsApp .add-activity-view .person-name,
+#friendsApp .add-comment-view .person-name,
 #friendsApp .activity-content .person-name {
   display: block;
   margin: 0 0 .5em;
@@ -520,16 +529,32 @@
   font-size: .7rem;
 }
 
+#friendsApp .activity-content .comment-content .time-span {
+  top: 12px;
+  font-size: .6rem;
+}
+
 #friendsApp .user-share-txt {
   color: #34495e;
 }
 
+#friendsApp .activity-content .comment-content .user-share-txt {
+  font-size: .75rem;
+}
+
 #friendsApp .activity-view .person-name,
-#friendsApp .add-activity-view .person-name {
+#friendsApp .add-activity-view .person-name,
+#friendsApp .add-comment-view .person-name {
   margin: .85em 0 1em;
 }
 
-#friendsApp .add-activity-view .person-name {
+#friendsApp .activity-view .comment-content .person-name {
+  margin: 0;
+  font-size: .85rem;
+}
+
+#friendsApp .add-activity-view .person-name,
+#friendsApp .add-comment-view .person-name {
   padding-left: .75em;
 }
 
@@ -572,12 +597,15 @@
   background: #fff none;
 }
 
-#friendsApp .add-activity-view .km-leftitem {
+#friendsApp .add-activity-view .km-leftitem,
+#friendsApp .add-comment-view .km-leftitem {
   left: 1em;
 }
 
-#friendsApp .add-activity-view .km-rightitem {
-  right: 1em;
+#friendsApp .add-activity-view .km-rightitem,
+#friendsApp .add-comment-view .km-rightitem,
+#friendsApp .activity-view .km-rightitem {
+    right: 1em;
 }
 
 #friendsApp.km-black-translucent-status-bar .km-navbar .km-leftitem,
