@@ -13,7 +13,7 @@ var app = (function (win) {
     var isApiKeySet = (appSettings.everlive.apiKey !== '$EVERLIVE_API_KEY$');
 
     if (!isApiKeySet) {
-        alert('Everlive API Key is not set.');
+        alert('Backend Services API Key is not set.');
         return;
     }
 
