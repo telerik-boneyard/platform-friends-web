@@ -53,7 +53,7 @@ app.Login = (function () {
             return currentTime.getFullYear();
         };
 
-        // Authenticate to use Everlive as a particular user
+        // Authenticate to use Backend Services as a particular user
         var login = function () {
 
             var username = $loginUsername.val();

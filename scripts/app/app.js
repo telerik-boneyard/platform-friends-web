@@ -17,7 +17,7 @@ var app = (function (win) {
         return;
     }
 
-    // Initialize Everlive SDK
+    // Initialize Backend Services SDK
     var el = new Everlive({
         apiKey: appSettings.everlive.apiKey,
         scheme: appSettings.everlive.scheme

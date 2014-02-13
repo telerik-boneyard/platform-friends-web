@@ -14,7 +14,7 @@ app.Signup = (function () {
         var $signupBtnWrp;
         var validator;
 
-        // Register user after required fields (username and password) are validated in Everlive
+        // Register user after required fields (username and password) are validated in Backend Services
         var signup = function () {
 
             dataSource.Gender = parseInt(dataSource.Gender);
