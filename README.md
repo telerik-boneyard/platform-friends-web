@@ -25,6 +25,9 @@ The following is a list of requirements for the sample app:
 - **Active Telerik Platform account**  
 To use this sample app you must have an active Telerik Platform account. Depending on your license you may not be able to use all features of the app. For more information on what is included in the different editions, please check out the pricing page for the respective product. All features included in the sample app will work in the free trial period.
 
+- **JavaScript/Html Editor**  
+You can use any javascript/html editor. (Notepad++, Sublime Text and etc)
+
 ## Configuring the sample app
 The Friends sample app comes fully functional, but to see it in action you must link it to your own Telerik Platform account.
 
@@ -59,6 +62,4 @@ Please replace the default setting in the **/scripts/app/settings.js** file.
 By default the Friends Sample is configured to use HTTP. In case you wish to switch to HTTPS please update the appSettings.everlive.scheme setting in the **/scripts/app/settings.js** file to "https".
 
 ## Running the sample app
-Once the app is configured as described in the previous section, you can run it either on a real device or in the {{TelerikAppBuilder}} simulator.
-
-> Make sure the emulator or the device you use have working Internet connection when running the sample. Internet connection is necessary in order to connect to the cloud.
+Once the app is configured as described in the previous section, you can run it on some web server. (IIS, Apache and etc.)
