@@ -4,10 +4,8 @@
 
 (function (a, win, doc) {
 
-    // var analytics = win.analytics = win.analytics || {};
-
     a.isAnalytics = function () {
-        return appSettings.eqatec.productKey !== '$EQATEC_PRODUCT_KEY$';
+        return win.app.isKeySet(appSettings.eqatec.productKey);
     };
 
     a.Start = function() {
