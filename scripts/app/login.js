@@ -20,6 +20,11 @@ app.Login = (function () {
         var isAnalytics = analytics.isAnalytics();
 
         var init = function () {
+
+            if (!app.isKeySet(appSettings.everlive.apiKey)) {
+                app.mobileApp.navigate('views/noApiKey.html', 'fade');
+            }
+
             $loginUsername = $('#loginUsername');
             $loginPassword = $('#loginPassword');
 
@@ -257,7 +262,7 @@ app.Login = (function () {
         return {
             init: init,
             show: show,
-            getYear: getYear,
+            getYear: app.getYear,
             login: login,
             loginWithFacebook: loginWithFacebook,
             loginWithGoogle: loginWithGoogle,

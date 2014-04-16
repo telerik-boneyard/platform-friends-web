@@ -19,11 +19,6 @@ var app = (function (win) {
         return !isNullOrEmpty(key) && !regEx.test(key);
     };
 
-    if (!isKeySet(appSettings.everlive.apiKey)) {
-        alert('Backend Services API Key is not set.');
-        return;
-    }
-
     // Initialize Backend Services SDK
     var el = new Everlive({
         apiKey: appSettings.everlive.apiKey,
