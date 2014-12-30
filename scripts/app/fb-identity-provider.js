@@ -4,7 +4,7 @@ var FacebookIdentityProvider = function (appId) {
     this.init = function () {
       FB.init({
           appId: appId,
-          status: true,
+          version: 'v2.1',
           xfbml: true
       });
     };
@@ -33,10 +33,11 @@ var FacebookIdentityProvider = function (appId) {
 };
 
 // Async load facebook sdk
-(function (doc) {
-        var js, id = 'facebook-jssdk', ref = doc.getElementsByTagName('script')[0];
-        if (doc.getElementById(id)) {return;}
-        js = doc.createElement('script'); js.id = id; js.async = true;
-        js.src = "//connect.facebook.net/en_US/all.js";
-        ref.parentNode.insertBefore(js, ref);
-}(document));
+(function (d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) { return; }
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/sdk.js";
+    fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
