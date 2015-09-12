@@ -25,8 +25,8 @@ var appSettings = {
     },
 
     liveId: {
-        clientId: '$LIVEID_CLIENT_ID$', // Put your LiveID Client ID here
-        redirectUri: '$LIVEID_CLIENT_ID$' // Put your LiveID Redirect URI here
+        clientId: '$000000004C10D1AF$', // Put your LiveID Client ID here
+        redirectUri: '$https://login.live.com/oauth20_desktop.srf$' // Put your LiveID Redirect URI here
     },
 
     adfs: {
