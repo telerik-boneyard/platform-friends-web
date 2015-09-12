@@ -11,6 +11,8 @@ tags: Sample App, Web, Web app, HTML, Application, JavaScript, BaaS, mBaaS, Soci
 
 # Telerik Friends Sample App for Web/HTML
 
+<a href="https://github.com/telerik/platform-friends-web" target="_blank"><img style="padding-left:20px" src="http://docs.telerik.com/platform/appbuilder/sample-apps/images/get-github.png" alt="Get from GitHub" title="Get from GitHub"></a>
+
 * [Overview](#overview)
 * [Requirements](#requirements)
 * [Configuration](#configuration)
