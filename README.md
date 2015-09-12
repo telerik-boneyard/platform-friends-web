@@ -1,15 +1,15 @@
 ---
-title: "Telerik Friends Sample App for Web/HTML"
+title: "Telerik Friends Sample App for Mobile Web/HTML"
 slug: sample-backend-services-friends-web
 position: 1
 publish: true
-page_title: Telerik Friends Sample App for Web/HTML | Telerik Platform
+page_title: Telerik Friends Sample App for Mobile Web/HTML | Telerik Platform
 description: 
 tags: Sample App, Web, Web app, HTML, Application, JavaScript, BaaS, mBaaS, Social, Analytics, Social Login, AD FS
 ---
 
 
-# Telerik Friends Sample App for Web/HTML
+# Telerik Friends Sample App for Mobile Web/HTML
 
 <a href="https://github.com/telerik/platform-friends-web" target="_blank"><img style="padding-left:20px" src="http://docs.telerik.com/platform/appbuilder/sample-apps/images/get-github.png" alt="Get from GitHub" title="Get from GitHub"></a>
 
@@ -37,8 +37,6 @@ To implement all the features listed above, the sample app utilizes the followin
 - Telerik Backend Services JavaScript SDK - to connect the app to Telerik Backend Services
 - Telerik Analytics - used to store and monitor analytics data in the cloud
 - Telerik Analytics JavaScript SDK - to connect the app with Telerik Analytics
-
-???- Telerik Mobile Testing - used to implement tests for the mobile app
 
 ## Requirements
 
@@ -149,8 +147,3 @@ Once the app is configured, you can host it on any Web server and run it in a We
 
 > Ensure that the Web browser that you are using has Internet connectivity when running the sample.
 
-## Screenshots
-
-![](screenshots/ios-login-screen.png)
-![](screenshots/ios-activities-stream.png)
-![](screenshots/ios-activitiy-details.png)
