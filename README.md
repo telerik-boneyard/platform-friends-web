@@ -1,13 +1,3 @@
----
-title: "Telerik Friends Sample App for Mobile Web/HTML"
-slug: sample-backend-services-friends-web
-position: 1
-publish: true
-page_title: Telerik Friends Sample App for Mobile Web/HTML | Telerik Platform
-description: 
-tags: Sample App, Web, Web app, HTML, Application, JavaScript, BaaS, mBaaS, Social, Analytics, Social Login, AD FS
----
-
 
 # Telerik Friends Sample App for Mobile Web/HTML
 
