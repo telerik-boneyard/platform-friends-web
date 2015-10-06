@@ -4,6 +4,7 @@
 <a href="https://github.com/telerik/platform-friends-web" target="_blank"><img style="padding-left:20px" src="http://docs.telerik.com/platform/appbuilder/sample-apps/images/get-github.png" alt="Get from GitHub" title="Get from GitHub"></a>
 
 * [Overview](#overview)
+* [Screenshots](#screenshots)
 * [Requirements](#requirements)
 * [Configuration](#configuration)
 * [Running the Sample](#running-the-sample)
@@ -27,6 +28,12 @@ To implement all the features listed above, the sample app utilizes the followin
 - Telerik Backend Services JavaScript SDK - to connect the app to Telerik Backend Services
 - Telerik Analytics - used to store and monitor analytics data in the cloud
 - Telerik Analytics JavaScript SDK - to connect the app with Telerik Analytics
+
+## Screenshots
+
+Login Screen|Activity Stream|Activity Details
+---|---|---
+![Login Screen](https://raw.githubusercontent.com/telerik/platform-friends-web/master/screenshots/android-login-screen.png)|![Activities stream view](https://raw.githubusercontent.com/telerik/platform-friends-web/master/screenshots/android-activities-stream.png)|![Activity details view](https://raw.githubusercontent.com/telerik/platform-friends-web/master/screenshots/android-activity-details.png)
 
 ## Requirements
 
