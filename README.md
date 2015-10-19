@@ -1,6 +1,6 @@
 # Telerik Friends Sample App for Mobile Web/HTML
 
-<a href="https://github.com/telerik/platform-friends-web" target="_blank"><img style="padding-left:20px" src="http://docs.telerik.com/platform/appbuilder/sample-apps/images/get-github.png" alt="Get from GitHub" title="Get from GitHub"></a>
+<a href="https://github.com/telerik/platform-friends-web" target="_blank"><img style="padding-left:20px" src="http://docs.telerik.com/platform/samples/images/get-github.png" alt="Get from GitHub" title="Get from GitHub"></a>
 
 * [Overview](#overview)
 * [Screenshots](#screenshots)
