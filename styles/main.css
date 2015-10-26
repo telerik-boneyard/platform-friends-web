@@ -415,17 +415,17 @@
 
 /* No API Key screen */
 
-#friendsApp .noapikey-scrn p {
+#friendsApp .noappid-scrn p {
     line-height: 1.5;
     color: #e4e4e4;
 }
 
-#friendsApp .noapikey-scrn p strong,
-#friendsApp .noapikey-scrn p span {
+#friendsApp .noappid-scrn p strong,
+#friendsApp .noappid-scrn p span {
     color: #fff;
 }
 
-#friendsApp .noapikey-scrn p span {
+#friendsApp .noappid-scrn p span {
     font-weight: 600;
 }
 
