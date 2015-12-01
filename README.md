@@ -35,7 +35,7 @@ What you need to set:
 
 - **API key for Telerik Backend Services**  
 This links the sample mobile app to a project in Telerik Backend Services. When you activate Telerik Backend Services a Friends sample project is created for you automatically. It has necessary structure defined and some data pre-filled. You must use its API key.  
-To set the API key open the **/scripts/app/settings.js** file and replace **$EVERLIVE_API_KEY$** with the API Key of your 'Friends' project.
+To set the API key open the **/scripts/app/settings.js** file and replace **$TELERIK_APP_ID$** with the API Key of your 'Friends' project.
 > If you happen to break the structure of the automatically generated Friends sample project, you can delete it and a fresh instance will be created again for you automatically. Alternatively, you could create a new project and choose to start from a Friends template, instead of starting from a blank project.
 
 - [optional] **API key for Telerik Analytics**  
