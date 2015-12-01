@@ -5,7 +5,7 @@
 var appSettings = {
 
     everlive: {
-        appId: '$EVERLIVE_API_KEY$', // Put your Telerik App Id here
+        appId: '$TELERIK_APP_ID$', // Put your Telerik App Id here
         scheme: 'http'
     },
 
