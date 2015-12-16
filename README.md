@@ -1,65 +1,114 @@
-Friends Sample App for Web/HTML
-=============================
-This repository contains the [Friends sample app](http://docs.telerik.com/platform/backend-services/samples/friends/friends-sample) for Web/HTML. The Friends app is a sample app showcasing the integration of Telerik Platform services into a web page appllication. To download the source code, just click on the "Download ZIP" button.
+# Friends Sample App for Web/HTML
 
-## Showcased features and SDKs
+<a id="top"></a>
+* [Overview](#overview)
+* [Requirements](#requirements)
+* [Configuration](#configuration)
+* [Running the Sample](#running-the-sample)
 
-Here is a list of the features that are showcased in the Friends sample app:
+# Overview
 
-- Cloud data access (Telerik Backend Services)
-- Working with files (Telerik Backend Services)
-- User registration and authentication (Telerik Backend Services)
-- Authentication with external providers (Facebook, Google, etc.) (Telerik Backend Services)
-- Basic app analytics (Telerik Analytics)
+This repository contains the Friends app for Web/HTML. It is a sample mobile app showcasing the integration of Telerik Platform services into a web page application.
+
+The Telerik Friends sample app showcases these features and SDKs:
+
+- [Cloud data](http://docs.telerik.com/platform/backend-services/javascript/data/introduction) access (Telerik Backend Services)
+- Working with [files](http://docs.telerik.com/platform/backend-services/javascript/files/introduction) (Telerik Backend Services)
+- User [registration](http://docs.telerik.com/platform/backend-services/javascript/users/users-register) and [authentication](http://docs.telerik.com/platform/backend-services/javascript/users/users-authenticate) (Telerik Backend Services)
+- Authentication with [social login](http://docs.telerik.com/platform/backend-services/javascript/users/social-login/introduction) providers (Facebook, Google, etc.) (Telerik Backend Services)
+- Basic [app analytics](http://docs.telerik.com/platform/analytics/getting-started/introduction) (Telerik Analytics)
 - Tracking custom events (Telerik Analytics)
 
 To implement all the features listed above, the sample app utilizes the following Telerik products and SDKs:
 
-- Telerik Backend Services JavaScript SDK - used to work with Telerik Backend Services.
-- Telerik Analytics JavaScript SDK - used to work with Telerik Analytics.
+- [Telerik Backend Services JavaScript SDK](http://docs.telerik.com/platform/backend-services/javascript/getting-started-javascript-sdk)&mdash;to connect the app to Telerik Platform
+- [Telerik Analytics JavaScript SDK](http://docs.telerik.com/platform/analytics/sdk/js/)&mdash;to connect the app to Telerik Platform
 
-## Requirements  
+# Requirements
 
-The following is a list of requirements for the sample app:
+Before you begin, you need to ensure that you have the following:
 
-- **Active Telerik Platform account**  
-To use this sample app you must have an active Telerik Platform account. Depending on your license you may not be able to use all features of the app. For more information on what is included in the different editions, please check out the pricing page for the respective product. All features included in the sample app will work in the free trial period.
+- **An active Telerik Platform account**
+Ensure that you can log in to a Telerik Platform account. This can be a free trial account. Depending on your license you may not be able to use all app features. For more information on what is included in the different editions, check out the pricing page. All features included in the sample app work during the free trial period.
+- **JavaScript/HTML Editor**
+You can use any JavaScript/HTML editor to edit the app code (Notepad++, Sublime Text, etc).
 
-- **JavaScript/Html Editor**  
-You can use any javascript/html editor. (Notepad++, Sublime Text and etc)
+# Configuration
 
-## Configuring the sample app
 The Friends sample app comes fully functional, but to see it in action you must link it to your own Telerik Platform account.
 
-What you need to set:
+1. Click the **Run in the Platform** button to clone the repository in AppBuilder.<br>
+	A new Telerik Platform app is created for you. You can view the app source code on the **Code** tab.
+2. Click the **Data** tab and then click **Enable and populate with sample data**.<br>
+	Sample content types with data required for the app to run is automatically created for you. The button also enables the **Users** service where user accounts for the app are precreated.
+3. Click the **Settings** tab.
+4. Take note of your **App ID**.
 
-- **API key for Telerik Backend Services**  
-This links the sample mobile app to a project in Telerik Backend Services. When you activate Telerik Backend Services a Friends sample project is created for you automatically. It has necessary structure defined and some data pre-filled. You must use its API key.  
-To set the API key open the **/scripts/app/settings.js** file and replace **$TELERIK_APP_ID$** with the API Key of your 'Friends' project.
-> If you happen to break the structure of the automatically generated Friends sample project, you can delete it and a fresh instance will be created again for you automatically. Alternatively, you could create a new project and choose to start from a Friends template, instead of starting from a blank project.
+> If you happen to break the structure of the automatically generated Friends data, you can delete the app and start over.
 
-- [optional] **API key for Telerik Analytics**  
-This step is optional, it links the sample mobile app to a Telerik Analytics project in your account. If you do not set this the sample will still work, but no analytics data will collected.
+## App ID for Telerik Platform
 
-- [optional] **Facebook app ID**  
-The sample app allows users to register using their Facebook account. We've pre-initialized the sample to use a Facebook app created by Telerik for the purpose. If you want, you can set it to use your own Facebook application by adjusting the Facebook app ID.  
-Please replace the default setting in the **/scripts/app/settings.js** file.
+This is a unique string that links the sample mobile app to your Telerik Platform account where all the data is read from/saved. To set it in the app code:
 
-- [optional] **Google**  
-The sample app allows users to register using their Google account.  
-Please replace the default setting in the **/scripts/app/settings.js** file.
+1. Open the `/scripts/app/settings.js` file.
+2. Replace `$TELERIK_APP_ID$` with the App ID of your Telerik Platform app.
 
-- [optional] **Windows Live**  
-The sample app allows users to register using their Live account.  
-Please replace the default setting in the **/scripts/app/settings.js** file.  
-**Test LiveID login on localhost:** You can't use the name localhost for redirect domain. You need to create an alias like mydev.machine.local or something, which you map to 127.0.0.1 using your system's HOSTS file.
+## (Optional) Project Key for Telerik Analytics
 
-- [optional] **Active Directory Federation Services (ADFS)**  
-The sample app allows users to register using ADFS.  
-Please replace the default setting in the **/scripts/app/settings.js** file.  
-**Note:** ADFS authentication can be done via HTTPS only.
+This is a unique string that links the sample mobile app to the Analytics part of your Telerik Platform app. If you do not set this the sample will still work, but no analytics data will be collected.
+	
+1. In the Telerik Platform portal, go to your app.
+2. Click the **Analytics** tab and then click **Enable**.
+3. Go to **Analytics > Settings > Options** and take note of your **Project Key**.
+4. Open the `/scripts/app/settings.js` file.
+5. Replace `$EQATEC_PROJECT_KEY$` with the **Project Key** that you acquired earlier.
 
-By default the Friends Sample is configured to use HTTP. In case you wish to switch to HTTPS please update the appSettings.everlive.scheme setting in the **/scripts/app/settings.js** file to "https".
+## (Optional) Facebook App ID
+To demonstrate social login, we have preinitialized the sample to use a purpose-built Facebook app by Telerik. However, you still need to enable Facebook integration in the Telerik Platform portal:
 
-## Running the sample app
-Once the app is configured as described in the previous section, you can run it on some web server. (IIS, Apache and etc.)
+1. In the Telerik Platform portal, go to your app.
+3. Navigate to **Users > Authentication**.
+4. Ensure that the **Facebook** box is checked.
+
+> Note that if you intend to use the code for a production app you need to set up your own Facebook application and adjust the Facebook app ID as follows:
+	
+1. Open the `/scripts/app/settings.js` file.
+2. Find the `appId: '1408629486049918'` line.
+3. Replace the number with your Facebook app ID.
+
+## (Optional) Google Client ID
+
+To demonstrate social login, we have preinitialized the sample to use a Google Client ID owned by Telerik. However, you still need to enable Google integration in the Telerik Platform portal:
+
+1. In the Telerik Platform portal, go to your app.
+2. Navigate to **Users > Authentication**.
+3. Ensure that the **Google** box is checked.
+
+> Note that if you intend to use the code for a production app you need to set up your own Google Client ID and adjust the code as follows:
+
+1. Open the `/scripts/app/settings.js` file.
+2. Find the `clientId: '406987471724-q1sorfhhcbulk6r5r317l482u9f62ti8.apps.googleusercontent.com'` line.
+3. Replace the number with your Google Client ID.
+	
+## (Optional) Microsoft Account
+
+The sample app allows users to register using their Microsoft Account.
+
+To try this integration, make the following configurations:
+
+1. In the Telerik Platform portal, go to your app.
+2. Navigate to **Users > Authentication**.
+3. Ensure that the **Windows Live** box is checked.
+4. Open the `/scripts/app/settings.js` file.
+5. Find the `$LIVEID_CLIENT_ID$` line.
+6. Replace the number with your Microsoft Account Client ID.
+
+> **Test Windows Account login on localhost:** You can't use the name localhost for redirect domain. You need to create an alias like mydev.machine.local and map it to 127.0.0.1 using your system's HOSTS file.
+
+## HTTPS Connections
+
+By default the Friends Sample is configured to use HTTP. If you want to switch to HTTPS, update the `appSettings.everlive.scheme` setting in `/scripts/app/settings.js` to `https`.
+
+# Running the Sample
+
+Once the app is configured, you can run it on a web server such as Microsoft Internet Information Services or Apache.
