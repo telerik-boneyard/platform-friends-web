@@ -112,4 +112,13 @@ By default the Friends Sample is configured to use HTTP. If you want to switch t
 
 # Running the Sample
 
-Once the app is configured, you can run it on a web server such as Microsoft Internet Information Services or Apache.
+This sample is a web app that cannot run directly in Telerik Platform. You need a web server such as Microsoft Internet Information Services or Apache to run it.
+
+Once you configure the sample app, copy all project files and folders to a dedicated directory on your web server, with the exception of the following:
+
+* .gitignore
+* README.md
+* frontmatter.yml
+* App_Resources
+
+Finally, configure your web server to display the sample app as you would configure any web site.
